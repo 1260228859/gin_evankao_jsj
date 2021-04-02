@@ -1,13 +1,15 @@
 package main
 
 import (
-	// "img_tag/routers"
+	_ "img_tag/bootstrap"
 	"img_tag/routers"
+
+	"github.com/spf13/viper"
 )
 
 func main() {
 	// 初始化router
 	router := routers.InitRouter()
-	router.Run("127.0.0.1:8080")
+	router.Run(viper.GetString("server.port"))
 
 }
