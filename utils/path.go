@@ -1,7 +1,7 @@
 package utils
 
 import (
-	// "os"
+	"os"
 	"path/filepath"
 )
 
@@ -10,13 +10,9 @@ func JoinPath(paths ...string) string {
 	return _filepath
 }
 
-// 检查项目必须的编译路径
-// func checkPath(paths []string) {
-// 	for _, path := range paths {
-// 		_, err := os.Stat(JoinPath(variable.BasePath, path))
-// 		fmt.Println(err)
-// 		if err != nil {
-// 			log.Fatal(my_errors.ErrorsConfigYamlNotExists + err.Error())
-// 		}
-// 	}
-// }
+
+// 检查文件/路径是否存在
+func CheckPathIsExits(path string) bool {
+	_, err := os.Stat(path)
+	return err != nil
+}
