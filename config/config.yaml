@@ -2,12 +2,6 @@ server:
   port: :9988
 datasource:
   driverName: mysql
-  host: 127.0.0.1
-  port: "3306"
-  database: gindb
-  username: root
-  password: 123456
-  charset: utf8
-  loc: Asia/Shanghai
+  uri: "root:DRsXT5ZJ6Oi55LPQ@bj-cynosdbmysql-grp-io3qyr86.sql.tencentcdb.com:27816/db_goskeleton?charset=utf8&parseTime=True&loc=Local"
 evankao:
   val: helloworld
