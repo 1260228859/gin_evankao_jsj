@@ -7,6 +7,7 @@ require (
 	github.com/armon/consul-api v0.0.0-20180202201655-eb2c6b5be1b6 // indirect
 	github.com/coreos/go-etcd v2.0.0+incompatible // indirect
 	github.com/gin-gonic/gin v1.6.3
+	github.com/go-sql-driver/mysql v1.6.0
 	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/openzipkin/zipkin-go v0.1.6 // indirect
 	github.com/spf13/viper v1.7.1 // indirect

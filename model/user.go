@@ -1,7 +1,7 @@
 package model
 
 import (
-	"fmt"
+	// "fmt"
 	"img_tag/common/variable"
 
 	"github.com/jinzhu/gorm"
@@ -13,10 +13,10 @@ type User struct {
 	Name  string
 }
 
-func Init() {
-	variable.Db.AutoMigrate(&User{})
+// func Init() {
+// 	variable.Db.AutoMigrate(&User{})
 
-	// var user User
-	// variable.Db.Find(&user, 1)
-	// fmt.Println(user, 11111)
-}
+// 	var user User
+// 	variable.Db.Find(&user, 1)
+// 	fmt.Println(user, 11111)
+// }
