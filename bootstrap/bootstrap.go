@@ -2,10 +2,11 @@ package bootstrap
 
 import (
 	"fmt"
-	"img_tag/common/db"
+	"img_tag/common/conn"
 	"img_tag/common/variable"
 	_ "img_tag/config"
-	"img_tag/model"
+	"img_tag/model/dao"
+	"img_tag/model/schema"
 
 	"github.com/gin-gonic/gin"
 )
@@ -23,12 +24,9 @@ func init() {
 		variable.Db = dbMysql
 	}
 
-	variable.Db.AutoMigrate(&model.User{})
+	variable.Db.AutoMigrate(&schema.User{})
 
-	var user = model.User{Phone: "18702279164", Name: "高健涛"}
-	user.Create()
-
-	model.User{}.Find(&model.User{})
+	dao.CreateUserDaoFactory().Find()
 	// variable.Db.Find(&user, 1)
 	// fmt.Println(user, 11111)
 

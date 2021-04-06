@@ -1,7 +1,7 @@
 package config
 
 import (
-	"fmt"
+	// "fmt"
 	"img_tag/utils"
 	"os"
 
@@ -13,8 +13,6 @@ func init() {
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath(utils.JoinPath(dir, "config"))
-	// 打印启动日志
-	fmt.Println(utils.JoinPath(dir, "config"), 111)
 	err := viper.ReadInConfig()
 	if err != nil {
 		panic(err)
