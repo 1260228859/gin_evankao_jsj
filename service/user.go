@@ -8,20 +8,20 @@ import (
 
 // 定义增删改查文件
 
-func CreateUserDaoFactory() *UserDao {
+func User() *UserService {
 
-	return &UserDao{}
+	return &UserService{}
 }
 
-type User schema.User
-type UserDao struct {
+type UserSchema schema.User
+type UserService struct {
 }
 
 
-func (u *UserDao) Find() (*User) {
+func (u *UserService) Find() (*UserSchema) {
 	// res := variable.Db.Model(&u.schema).Where("id=?", 1)
 	
-	var UserScheam User 
+	var UserScheam UserSchema 
 	variable.Db.Find(&UserScheam)
 
 	fmt.Println(UserScheam, 2222)

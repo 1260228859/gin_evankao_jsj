@@ -7,6 +7,6 @@ import (
 )
 
 func GetUser(c *gin.Context) {
-	user := service.CreateUserDaoFactory().Find()
+	user := service.User().Find()
 	c.JSON(200, user)
 }
