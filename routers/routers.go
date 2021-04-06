@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"img_tag/app/user"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -27,6 +28,7 @@ func addRouter() {
 	// 添加各模块蓝图 type Option
 	// router1
 	// router2
+	user.InitRouter,
 	)
 }
 

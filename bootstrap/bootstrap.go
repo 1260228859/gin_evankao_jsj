@@ -5,8 +5,7 @@ import (
 	"img_tag/common/conn"
 	"img_tag/common/variable"
 	_ "img_tag/config"
-	"img_tag/model/dao"
-	"img_tag/model/schema"
+	"img_tag/model/migrate"
 
 	"github.com/gin-gonic/gin"
 )
@@ -22,12 +21,10 @@ func init() {
 		fmt.Println(err)
 	} else {
 		variable.Db = dbMysql
+		// 设置数据库
 	}
 
-	variable.Db.AutoMigrate(&schema.User{})
-
-	dao.CreateUserDaoFactory().Find()
-	// variable.Db.Find(&user, 1)
-	// fmt.Println(user, 11111)
+	// 数据库自动迁移脚本
+	migrate.InitMysqlAutoMigrate()
 
 }
