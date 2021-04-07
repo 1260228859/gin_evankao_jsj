@@ -25,10 +25,10 @@ func Include(opt ...Option) {
 
 func addRouter() {
 	Include(
-	// 添加各模块蓝图 type Option
-	// router1
-	// router2
-	user.InitRouter,
+		// 添加各模块蓝图 type Option
+		// router1
+		// router2
+		user.InitRouter,
 	)
 }
 

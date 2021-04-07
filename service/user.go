@@ -16,18 +16,17 @@ func User() *UserService {
 type UserService struct {
 }
 
-
-func (u *UserService) Find() (*schema.User) {
+func (u *UserService) Find() *schema.User {
 	// res := variable.Db.Model(&u.schema).Where("id=?", 1)
-	
-	var UserScheam schema.User 
+
+	var UserScheam schema.User
 	variable.Db.Find(&UserScheam)
 
 	fmt.Println(UserScheam, 2222)
 	return &UserScheam
 }
 
-func Find(schema *interface{}) (*interface{}) {
+func Find(schema *interface{}) *interface{} {
 	variable.Db.Find(schema)
 	return schema
 }

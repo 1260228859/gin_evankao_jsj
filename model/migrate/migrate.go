@@ -5,8 +5,7 @@ import (
 	"img_tag/model/schema"
 )
 
-
-func InitMysqlAutoMigrate()  {
+func InitMysqlAutoMigrate() {
 	variable.Db.AutoMigrate(
 		&schema.User{},
 	)
