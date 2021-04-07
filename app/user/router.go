@@ -1,14 +1,14 @@
 package user
 
 import (
-	"img_tag/middleware"
+	// "img_tag/middleware"
 
 	"github.com/gin-gonic/gin"
 )
 
 func InitRouter(r *gin.Engine) {
-	r.Group("user").Use(middleware)
+	userRouter := r.Group("user").Use()
 	{
-		r.GET("/", GetUser)
+		userRouter.GET("/:id", GetUser)
 	}
 }
