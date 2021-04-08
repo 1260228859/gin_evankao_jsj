@@ -1,8 +1,8 @@
 package migrate
 
 import (
-	"img_tag/common/variable"
 	"img_tag/model/schema"
+	"img_tag/pkg/variable"
 )
 
 func InitMysqlAutoMigrate() {

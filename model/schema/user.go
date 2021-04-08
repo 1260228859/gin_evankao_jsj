@@ -2,7 +2,7 @@ package schema
 
 import (
 	// "fmt"
-	// "img_tag/common/variable"
+	// "img_tag/pkg/variable"
 
 	"github.com/jinzhu/gorm"
 )

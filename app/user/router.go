@@ -9,6 +9,7 @@ import (
 func InitRouter(r *gin.Engine) {
 	userRouter := r.Group("user").Use()
 	{
-		userRouter.GET("/:id", GetUser)
+		userRouter.GET("/error", GetUserError)
+		userRouter.GET("/id", GetUser)	
 	}
 }

@@ -2,10 +2,10 @@ package bootstrap
 
 import (
 	"fmt"
-	"img_tag/common/conn"
-	"img_tag/common/variable"
 	_ "img_tag/config"
 	"img_tag/model/migrate"
+	"img_tag/pkg/conn"
+	"img_tag/pkg/variable"
 
 	"github.com/gin-gonic/gin"
 )

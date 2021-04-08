@@ -2,8 +2,8 @@ package service
 
 import (
 	"fmt"
-	"img_tag/common/variable"
 	"img_tag/model/schema"
+	"img_tag/pkg/variable"
 )
 
 // 定义增删改查文件
